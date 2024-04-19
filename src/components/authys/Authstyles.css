@@ -1,0 +1,124 @@
+.auth{
+    background-color: white;
+    height:100%;
+
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    background-color: white;
+
+}
+.logoo{
+    width: 100px;
+}
+.subnav{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+    gap: 20px;
+}
+.subernav{
+    color: rgb(90, 75, 252);
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 40px;
+}
+.tab-active{
+    color: rgb(90, 75, 252);
+    text-decoration: underline 2px;
+}
+
+.main-content{
+    background-image: linear-gradient(
+        180deg, rgb(255, 212, 255), rgb(225, 241, 255)
+    );
+    display: flex;
+    justify-content: center;
+}
+
+.auth-box{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: white;
+    border-radius: 4ch;
+    box-shadow: 1%;
+    width: 500px;
+}
+.heading{
+    display: flex;
+    justify-content: end;
+    color: rgb(138, 22, 221);
+}
+.auth-content{
+    margin-left: 20px;
+    margin-right: 20px;
+    /* display: flex; */
+    justify-content:center;
+    margin-bottom: 30px;
+}
+.boxes{
+    display: flex;
+    justify-content: center;
+}
+.form-content{
+    display: grid;
+    gap: 20px;
+}
+.gender{
+    display: flex;
+    gap: 20px;
+}
+.age{
+    display: flex;    
+    gap: 10px;
+}
+.age-sub{
+    display: flex;
+    gap:10px;
+}
+.age-selection{
+    padding: 20px;
+    border-color:rgb(90, 75, 252);
+    border-width: 20px;
+    border-radius: 40px;
+    background-color: rgb(229, 255, 255);
+
+}
+.input-box{
+    padding: 10px;
+    border-radius: 10px;
+    border-color: rgb(185, 185, 185);
+}
+
+.register-button{
+    padding:10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    background-color: rgb(90, 14, 255);
+    border-color: transparent;
+    color: white;
+}
+
+.link{
+    color: black;
+    text-decoration: none;
+}
+.reg-button a{
+    
+    height: 10px;
+    width: 80px;
+    color: white;
+}
+.body-type{
+    width: 400px;
+    height: 140px;
+    overflow:scroll;
+    
+    scrollbar-width: none;
+
+}

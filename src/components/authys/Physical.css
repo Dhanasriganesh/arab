@@ -1,0 +1,9 @@
+.characteristics-sty{
+    display: grid;
+    justify-content: center;
+    /* background-color: aqua; */
+    text-align: center;
+    /* width: 300px; */
+    gap: 30px;
+    /* background-color: aqua; */
+}
