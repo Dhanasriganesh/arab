@@ -82,5 +82,10 @@
 }
 .text-img{
     display: flex;
-    justify-content: ;
+    justify-content: center;
+}
+.bottom-text{
+    display: grid;
+    justify-content: end;
+    
 }
