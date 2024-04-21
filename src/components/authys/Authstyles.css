@@ -46,7 +46,7 @@
     background-color: white;
     border-radius: 4ch;
     box-shadow: 1%;
-    width: 500px;
+    width: 600px;
 }
 .heading{
     display: flex;
@@ -115,7 +115,7 @@
     color: white;
 }
 .body-type{
-    width: 400px;
+    width: 450px;
     height: 140px;
     overflow:scroll;
     

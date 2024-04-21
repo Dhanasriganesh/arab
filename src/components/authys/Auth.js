@@ -5,6 +5,8 @@ import { AgeContainer, AgeSelectContainer, FormContainer, FormTextInput, StyledF
 import RegionDropdown from "react-country-region-selector"
 import male from "../../Assets/Male.png";
 import Female from "../../Assets/Female.png";
+import img from "../../Assets/img.jpg";
+import { Link } from 'react-router-dom';
 import './Physicalchar'
 
 const Auth = () => {
@@ -70,7 +72,8 @@ const Auth = () => {
             </div>
             <div className='subnav'>
                 <p>سمية الحربي</p>
-                <p>Image</p>
+                <img className="img"
+                        src={img} alt="img" />
             </div>
             <div className='subernav'>
             <a href="/preferences" className='link'>
@@ -86,65 +89,6 @@ const Auth = () => {
             <div className='main-content'>
                 <div className='auth-box'>
                     <div className='auth-content'>
-                        {/* 
-                        <div className='boxes'>
-                        <form className='form-content'>
-                            <input
-                            className='input-box'
-                            name=''
-                            placeholder='Name'
-                            />
-                                            <StyledFlagSelect
-                    selected={country}
-                    onSelect={handleCountrySelect}
-                    placeholder="Country"
-                    searchable
-                    searchPlaceholder='Select Country'
-                    className='CountrySelect'
-                    fullWidth={true}
-                    selectedSize={16}
-                />
-                             <input
-                            name=''
-                            className='input-box'
-                            placeholder='Region'
-                            type=''
-                            />
-                             <input
-                            name=''
-                            className='input-box'
-                            placeholder='Number'
-                            type='number'
-                            />
-                            <h3>Select Your Age</h3>
-                            <div>
-                                <div className='age-gap'>
-                                    <div className='age'>
-                                        <p className='age-selection'>Age 17-30</p>
-                                        <p className='age-selection'>Age 16-12</p>
-                                        </div>
-                                        <div className='age-sub'>
-                                            <p className='age-selection'>Above 45</p>
-                                            <p className='age-selection'>Age 31-45</p>
-                                        </div>
-                                                                </div>
-                                </div>
-                            
-                            <h3>Gender</h3>
-                            <div className='gender'>
-                                <p>Male
-                                </p>
-                                <p>
-                                    Female
-                                </p>
-                            </div>
-                            <div>
-                                <button className='register-button' name=''>
-                                    Register
-                                </button>
-                            </div>
-                        </form>
-                        </div> */}
                         <div className='heading'>
                             <h1>معلوماتي الشخصية</h1>
                         </div>

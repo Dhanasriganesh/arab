@@ -14,45 +14,27 @@ import { GoDotFill } from "react-icons/go";
 import { GoDot } from "react-icons/go";
 import pinkCheck from "../../Assets/pinkCheck.png"
 import Logo from '../../Assets/logo.jpg';
+import imges from '../../Assets/img.jpg';
 
 function Preferences({ updateUserInfo, userInfo }) {
     const [likedItems, setLikedItems] = useState([]);
     const [dislikedItems, setDislikedItems] = useState([]);
-    // const [selectedPatterns, setSelectedPatterns] = useState([]);
     const [selectedColors, setSelectedColors] = useState([]);
     const [selectedParts, setSelectedParts] = useState([]);
     const [selectedTops, setSelectedTops] = useState([]);
     const [selectedBottom, setSelectedBottom] = useState([]);
     const [selectedFootwear, setSelectedFootwear] = useState([]);
-
-
-    // const handleLikeSelect = (value) => {
-    //     setLikedItems(value);
-
-    // };
-
-    // const handleDislikeSelect = (value) => {
-    //     setDislikedItems(value);
-
-    // };
-
     const handleLikeSelect = (item) => {
         const isLiked = likedItems.includes(item);
         const isDisliked = dislikedItems.includes(item);
         if (!isLiked) {
-            // If the item is not already liked, add it to liked and remove it from disliked
             const newLiked = [...likedItems, item];
             const newDisliked = dislikedItems.filter(name => name !== item);
             setLikedItems(newLiked);
             setDislikedItems(newDisliked);
-            // Update user information here
-            updateUserInfo({ Liked: newLiked, DisLiked: newDisliked });
         } else {
-            // If the item is already liked, remove it from liked
             const newLiked = likedItems.filter(name => name !== item);
             setLikedItems(newLiked);
-            // Update user information here
-            updateUserInfo({ Liked: newLiked, DisLiked: dislikedItems });
         }
     };
 
@@ -61,35 +43,21 @@ function Preferences({ updateUserInfo, userInfo }) {
         const isLiked = likedItems.includes(item);
 
         if (!isDisliked) {
-            // If the item is not already disliked, add it to disliked and remove it from liked
             const newDisliked = [...dislikedItems, item];
             const newLiked = likedItems.filter(name => name !== item);
             setDislikedItems(newDisliked);
             setLikedItems(newLiked);
-            // Update user information here
-            // updateUserInfo({ Liked: newLiked, DisLiked: newDisliked });
-        } else {
-            // If the item is already disliked, remove it from disliked
-            const newDisliked = dislikedItems.filter(name => name !== item);
-            setDislikedItems(newDisliked);
-            // Update user information here
-            // updateUserInfo({ Liked: likedItems, DisLiked: newDisliked });
-        }
+ } else {
+         const newDisliked = dislikedItems.filter(name => name !== item);
+            setDislikedItems(newDisliked);    }
     };
-    const handlePatternSelect = (patternName) => {
-        // const updatedPatterns = selectedPatterns.includes(patternName)
-        //     ? selectedPatterns.filter(name => name !== patternName)
-        //     : [...selectedPatterns, patternName];
-        // setSelectedPatterns(updatedPatterns);
-        // updateUserInfo({ ...userInfo, Pattern: updatedPatterns });
-    };
+    const handlePatternSelect = (patternName) => {};
 
     const handleColorSelect = (colorName) => {
         const updatedColors = selectedColors.includes(colorName)
             ? selectedColors.filter(name => name !== colorName)
             : [...selectedColors, colorName];
         setSelectedColors(updatedColors);
-        // updateUserInfo({ ...userInfo, Colors: updatedColors });
     };
 
     const handlePartSelect = (partName) => {
@@ -97,7 +65,6 @@ function Preferences({ updateUserInfo, userInfo }) {
             ? selectedParts.filter(name => name !== partName)
             : [...selectedParts, partName];
         setSelectedParts(updatedParts);
-        // updateUserInfo({ ...userInfo, BodyParts: updatedParts });
     };
 
     const handleTopSelect = (TopName) => {
@@ -105,7 +72,6 @@ function Preferences({ updateUserInfo, userInfo }) {
             ? selectedTops.filter(name => name !== TopName)
             : [...selectedTops, TopName];
         setSelectedTops(updatedTops);
-        // updateUserInfo({ ...userInfo, Top: updatedTops });
     };
 
     const handleBottomSelect = (BottomName) => {
@@ -113,7 +79,6 @@ function Preferences({ updateUserInfo, userInfo }) {
             ? selectedBottom.filter(name => name !== BottomName)
             : [...selectedBottom, BottomName];
         setSelectedBottom(updatedBottoms);
-        // updateUserInfo({ ...userInfo, Bottom: updatedBottoms });
     };
 
     const handleFootwearSelect = (FootwearName) => {
@@ -121,13 +86,9 @@ function Preferences({ updateUserInfo, userInfo }) {
             ? selectedFootwear.filter(name => name !== FootwearName)
             : [...selectedFootwear, FootwearName];
         setSelectedFootwear(updatedFootwear);
-        // updateUserInfo({ ...userInfo, Footwear: updatedFootwear });
     };
 
     useEffect(() => {
-        // Prefill the selected values based on userInfo
-        // setLikedItems(userInfo.Liked || []);
-        // setDislikedItems(userInfo.DisLiked || []);
     }, [userInfo]);
 
     const CustomPrevArrow = (props) => {
@@ -210,7 +171,8 @@ function Preferences({ updateUserInfo, userInfo }) {
             </div>
             <div className='subnav'>
                 <p>سمية الحربي</p>
-                <p>Image</p>
+                <img className="imges"
+                        src={imges} alt="imges" />
             </div>
             <div className='subernav'>
                 <a href="/preferences" className='link'>
@@ -232,12 +194,10 @@ function Preferences({ updateUserInfo, userInfo }) {
                             </div></h1>
                         </div>
                         <div className='characteristics-sty'>
-                            <div className='preferences-1'>
-                                {/* <LoginHeading style={{ paddingTop: "2vh" }}>Personal Preferences 1</LoginHeading> */}
+                            {/* <div className='preferences-1'>
                                 <LoginSub>اختاري ستايلات الملابس المفضلة لك</LoginSub>
                                 <AgeContainer style={{ padding: "10px", marginLeft: "-8vh" }}>
-                                    {/* <LoginSub><b>Select your Style Aesthetics</b></LoginSub> */}
-                                </AgeContainer>
+                                     </AgeContainer>
                                 <AstheticCaroseul>
                                     <SliderContainer1>
                                         <SliderContainer>
@@ -267,7 +227,7 @@ function Preferences({ updateUserInfo, userInfo }) {
                                         </SliderContainer>
                                     </SliderContainer1>
                                 </AstheticCaroseul>
-                            </div>
+                            </div> */}
                             <div className='preferences-2'>
                                 {/* <LoginHeading style={{ paddingTop: "2vh" }}>Personal Preferences</LoginHeading> */}
                                 {/* <LoginSub>Hey there! We'd love to get to know you better to personalize your experience.</LoginSub> */}
@@ -388,11 +348,13 @@ function Preferences({ updateUserInfo, userInfo }) {
                                         </RadioContainer>
                                     </div>
                                     <div className='reg-button'>
-                                        <a href='/home'>
+                                        
                                             <button className='register-button' name=''>
+                                            <a href='/home'>
                                                 Next
+                                                </a>
                                             </button>
-                                        </a>
+                                        
                                     </div>
                                 </AgeContainer>
                             </div>

@@ -6,6 +6,7 @@ import { RadioColorOption, RadioContainer, RadioOptionImage, RadioOptionText, Ra
 import { bodyTypeOptions, skinColorOptions, hairColorOptions } from '../data/data.js'; // Importing options
 import pinkCheck from "../../Assets/pinkCheck.png";
 import Logo from '../../Assets/logo.jpg';
+import imge from "../../Assets/img.jpg" ;
 import { Link } from 'react-router-dom';
 
 function PhysicalCharacteristics({ updateUserInfo, userInfo }) 
@@ -61,7 +62,8 @@ function PhysicalCharacteristics({ updateUserInfo, userInfo })
       </div>
       <div className='subnav'>
         <p>سمية الحربي</p>
-        <p>Image</p>
+        <img className="imge"
+            src={imge} alt="imge" />
       </div>
       <div className='subernav'>
       <a href="/preferences" className='link'>
@@ -132,11 +134,13 @@ function PhysicalCharacteristics({ updateUserInfo, userInfo })
                   </RadioContainer>
                 </div>
                 <div className='reg-button'>
-                  <a href='/preferences'>
+                 
                     <button className='register-button' name=''>
+                    <a href='/preferences'>
                       Next
+                      </a>
                     </button>
-                  </a>
+                  
                 </div>
               </AgeContainer>
             </div>

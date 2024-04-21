@@ -94,8 +94,9 @@ const Homemain = () => {
                     <p>69.00 SAR</p>
                   </div>
             </div>
-            <a href='/shirt'>
+           
             <div className='img-text'>
+            <a href='/shirt'>
               <img className="shirt"
               src={shirt} alt="shirt" />
               <p>هاينيس إسطنبول قميص أبيض</p>
@@ -104,8 +105,9 @@ const Homemain = () => {
                       <p>التفاصيل</p>
                       <p>62.99 SAR</p>
                     </div>
+                    </a>
             </div>
-            </a>
+            
 
       </div>
     </div>
