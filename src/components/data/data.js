@@ -157,11 +157,11 @@ export const LikePreferencesData = [
 ];
 // PhysicalCharacteristicsOptions.js
 export const bodyTypeOptions = [
-    { value: "Hour Glass", label: "Hour Glass", image: require("../../Assets/Hourglass.png") },
-    { value: "Rectangle", label: "Rectangle", image: require("../../Assets/Rectangle.png") },
-    { value: "Triangle", label: "Triangle", image: require("../../Assets/triangle.png") },
-    { value: "Pear", label: "Pear", image: require("../../Assets/pear.png") },
-    { value: "Apple", label: "Apple", image: require("../../Assets/apple.png") }
+    { value: "Hour Glass", label: "الساعة الرملية", image: require("../../Assets/Hourglass.png") },
+    { value: "Rectangle", label: "المستطيل", image: require("../../Assets/Rectangle.png") },
+    { value: "Triangle", label: "مثلث مقلوب", image: require("../../Assets/triangle.png") },
+    { value: "Pear", label: "الكمثرى", image: require("../../Assets/pear.png") },
+    { value: "التفاحة", label: "التفاحة", image: require("../../Assets/apple.png") }
 ];
 
 export const skinColorOptions = ['#D9B7A4', '#E0C5B7', '#E6D8CB', '#F4E9D1', '#FBF5ED', '#7B523D', '#7E3D19', '#BB876A', '#C29989', '#D7C0B0'];

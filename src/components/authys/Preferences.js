@@ -171,12 +171,12 @@ function Preferences({ updateUserInfo, userInfo }) {
             </div>
             <div className='subnav'>
                 <p>سمية الحربي</p>
-                <img className="imges"
+                <img className="iconimg"
                         src={imges} alt="imges" />
             </div>
             <div className='subernav'>
                 <a href="/preferences" className='link'>
-                    <p>الخصائص     </p>
+                <p>التفضيلات</p>
                 </a>
                 <a href="/physicalchar" className='link'>
                     <p> التفضيلات الجسدية</p>
@@ -190,7 +190,7 @@ function Preferences({ updateUserInfo, userInfo }) {
                     <div className='auth-content'>
                         <div className='heading'>
                             <h1><div className='heading'>
-                                الخصائص الجسدية
+                            <p>التفضيلات</p>
                             </div></h1>
                         </div>
                         <div className='characteristics-sty'>
@@ -249,7 +249,7 @@ function Preferences({ updateUserInfo, userInfo }) {
                                     </RadioContainer>
                                 </AgeContainer>
                                 <AgeContainer style={{ padding: "10px", marginLeft: "-8vh" }}>
-                                    <LoginSub><b>Select your Favorite Colors</b>(you can select more than one)</LoginSub>
+                                    <LoginSub className='single'><b>حددي الألوان المفضلة لك </b>(يُمكنك اختيار أكثر من خيار واحد)</LoginSub>
                                     <div className='body-type'>
                                         <RadioContainer>
                                             {colorsData.map((color, index) => (
@@ -268,7 +268,7 @@ function Preferences({ updateUserInfo, userInfo }) {
                                     </div>
                                 </AgeContainer>
                                 <AgeContainer style={{ padding: "10px", marginLeft: "-8vh" }}>
-                                    <LoginSub><b>Select the Body Parts you're Comfortable Revealing</b></LoginSub>
+                                    <LoginSub className='single'><b>مستوى الاحتشام </b>(حددي الأجزاء التي لاتمانعين في إظهارها)</LoginSub>
                                     <div className='body-type'>
                                         <RadioContainer>
                                             {RevealData.map((part, index) => (
@@ -292,7 +292,7 @@ function Preferences({ updateUserInfo, userInfo }) {
                                 {/* <LoginHeading style={{ paddingTop: "2vh" }}>Personal Preferences</LoginHeading> */}
                                 {/* <LoginSub>Hey there! We'd love to get to know you better to personalize your experience.</LoginSub> */}
                                 <AgeContainer style={{ padding: "10px", marginLeft: "-8vh" }}>
-                                    <LoginSub><b>Select your Favorite Topwear</b> (you can select more than one)</LoginSub>
+                                    <LoginSub><b>حددي اللباس العلوي المفضل لك</b></LoginSub>
                                     <div className='body-type'>
                                         <RadioContainer>
                                             {TopData.map((Top, index) => (
@@ -311,7 +311,7 @@ function Preferences({ updateUserInfo, userInfo }) {
                                     </div>
                                 </AgeContainer>
                                 <AgeContainer style={{ padding: "10px", marginLeft: "-8vh" }}>
-                                    <LoginSub><b>Select your Favorite Bottomwear</b>(you can select more than one)</LoginSub>
+                                    <LoginSub><b>حددي اللباس السفلي المفضل لك</b></LoginSub>
                                     <div className='body-type'>
                                         <RadioContainer>
                                             {BottomData.map((Bottom, index) => (
@@ -330,7 +330,7 @@ function Preferences({ updateUserInfo, userInfo }) {
                                     </div>
                                 </AgeContainer>
                                 <AgeContainer style={{ padding: "10px", marginLeft: "-8vh" }}>
-                                    <LoginSub><b>Select your Favorite Footwear</b> (you can select more than one)</LoginSub>
+                                    <LoginSub><b>حددي الأحذية المفضلة لك</b></LoginSub>
                                     <div className='body-type'>
                                         <RadioContainer>
                                             {FootData.map((Footwear, index) => (
@@ -348,14 +348,14 @@ function Preferences({ updateUserInfo, userInfo }) {
                                         </RadioContainer>
                                     </div>
                                     <div className='reg-button'>
-                                        
-                                            <button className='register-button' name=''>
-                                            <a href='/home'>
-                                                Next
-                                                </a>
-                                            </button>
-                                        
-                                    </div>
+                 
+                 <button className='register-button' name=''>
+                 <a href='/home'>
+                 حفظ التغييرات
+                   </a>
+                 </button>
+               
+             </div>
                                 </AgeContainer>
                             </div>
                         </div>

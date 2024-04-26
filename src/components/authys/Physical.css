@@ -7,3 +7,6 @@
     gap: 30px;
     /* background-color: aqua; */
 }
+.single{
+    display: grid;
+}

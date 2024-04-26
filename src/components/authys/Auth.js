@@ -3,8 +3,8 @@ import './Authstyles.css'
 import Logo from '../../Assets/logo.jpg'
 import { AgeContainer, AgeSelectContainer, FormContainer, FormTextInput, StyledFlagSelect, StyledPhoneInput, StyledRegionSelect, LoginSub, AgeRadio, GenderRadio } from '../style/Formstyle'
 import RegionDropdown from "react-country-region-selector"
-import male from "../../Assets/Male.png";
-import Female from "../../Assets/Female.png";
+import male from "../../Assets/Group 72.jpg";
+import Female from "../../Assets/Group 35.jpg";
 import img from "../../Assets/img.jpg";
 import { Link } from 'react-router-dom';
 import './Physicalchar'
@@ -72,12 +72,12 @@ const Auth = () => {
             </div>
             <div className='subnav'>
                 <p>سمية الحربي</p>
-                <img className="img"
+                <img className="iconimg"
                         src={img} alt="img" />
             </div>
             <div className='subernav'>
             <a href="/preferences" className='link'>
-                <p>الخصائص</p>
+                <p>التفضيلات</p>
                 </a>
                 <a href="/Physicalchar" className='link'>
                 <p> التفضيلات الجسدية</p>
@@ -92,82 +92,94 @@ const Auth = () => {
                         <div className='heading'>
                             <h1>معلوماتي الشخصية</h1>
                         </div>
-                        <FormContainer>
-                            <FormTextInput
-                                placeholder="Tell us your name"
-                                type='text'
-                                // value={name}
-                                onChange={handleNameChange}
-                                required
-                            />
-                            <StyledFlagSelect
-                                selected={country}
-                                onSelect={handleCountrySelect}
-                                placeholder="Country"
-                                searchable
-                                searchPlaceholder='Select Country'
-                                className='CountrySelect'
-                                fullWidth={true}
-                                // selectedSize={16}
-                            />
-                            <StyledRegionSelect
-                                country={country}
-                                countryValueType="short"
-                                placeholder='City'
-                                onChange={handleRegionSelect}
-                            />
-                            <StyledPhoneInput
-                                international
-
-                                onChange={handlePhoneChange}
-                                enableSearch={true}
-                                placeholder="Enter Number with Country Code"
-                                countryCodeEditable={true}
-                            />
-
-                            <AgeContainer>
-                                <LoginSub>Select Your Age Group</LoginSub>
-                                <AgeSelectContainer>
-                                    <AgeRadio active={selected === "12 to 14"} onClick={() => handleAgeSelect("12 to 14")} disabled={selected === "12 to 14"}>
-                                       Age 17 to 30
-                                    </AgeRadio>
-                                    <AgeRadio active={selected === "15 to 17"} onClick={() => handleAgeSelect("15 to 17")} disabled={selected === "15 to 17"}>
-                                       Age 12 to 16
-                                    </AgeRadio>
-                                </AgeSelectContainer>
-                                <AgeSelectContainer>
-                                    <AgeRadio active={selected === "18 to 20"} onClick={() => handleAgeSelect("18 to 20")} disabled={selected === "18 to 20"}>
-                                       Age 31 to 45
-                                    </AgeRadio>
-                                    <AgeRadio active={selected === "21 to 25"} onClick={() => handleAgeSelect("21 to 25")} disabled={selected === "21 to 25"}>
-                                       Age Above 45
-                                    </AgeRadio>
-                                </AgeSelectContainer>
-                            </AgeContainer>
-                            <AgeContainer>
-                                <LoginSub>Are You</LoginSub>
-                                <AgeSelectContainer>
-                                    <GenderRadio active={gender === "Male"} onClick={() => handleGenderSelect("Male")} disabled={gender === "Male"}>
-                                        <div>Male</div>
-                                        <div><img src={male} height={56} alt="Male" /></div>
-                                    </GenderRadio>
-                                    <GenderRadio active={gender === "Female"} onClick={() => handleGenderSelect("Female")} disabled={gender === "Female"}>
-                                        <div>Female</div>
-                                        <div><img src={Female} height={56} alt="Female" /></div>
-                                    </GenderRadio>
-                                </AgeSelectContainer>
-                            </AgeContainer>
+                        <div className='end'>
+                            <FormContainer>
+                                <div className='name'>
+                                    <FormTextInput
+                                        placeholder="سمية"
+                                        type='text'
+                                        // value={name}
+                                        onChange={handleNameChange}
+                                        required
+                                    />
+                                </div>
+                                <div className='country'>
+                                    <StyledFlagSelect
+                                        selected={country}
+                                        onSelect={handleCountrySelect}
+                                        placeholder="السعودية"
+                                        searchable
+                                        searchPlaceholder='Select Country'
+                                        className='CountrySelect'
+                                        fullWidth={true}
+                                        // selectedSize={16}
+                                    />
+                                </div>
+                                <div className='city'>
+                                    <StyledRegionSelect
+                                        country={country}
+                                        countryValueType="short"
+                                        placeholder='City'
+                                        onChange={handleRegionSelect}
+                                    />
+                                </div>
+                                <div className='phone'>
+                                    <StyledPhoneInput
+                                        international
+                                        onChange={handlePhoneChange}
+                                        enableSearch={true}
+                                        placeholder="Enter Number with Country Code"
+                                        countryCodeEditable={true}
+                                    />
+                                </div>
+                                <AgeContainer>
+                                    <div className='headd'>
+                                       <LoginSub><h3>حدد فئتك العمرية</h3> </LoginSub>
+                                    </div>
+                                    <AgeSelectContainer>
+                                        <AgeRadio active={selected === "12 to 14"} onClick={() => handleAgeSelect("12 to 14")} disabled={selected === "12 to 14"}>
+                                        من 17 - 30 عام
+                                        </AgeRadio>
+                                        <AgeRadio active={selected === "15 to 17"} onClick={() => handleAgeSelect("15 to 17")} disabled={selected === "15 to 17"}>
+                                        من 12 - 16 عام
+                                        </AgeRadio>
+                                    </AgeSelectContainer>
+                                    <AgeSelectContainer>
+                                        <AgeRadio active={selected === "18 to 20"} onClick={() => handleAgeSelect("18 to 20")} disabled={selected === "18 to 20"}>
+                                        فوق 45 عام
+                                        </AgeRadio>
+                                        <AgeRadio active={selected === "21 to 25"} onClick={() => handleAgeSelect("21 to 25")} disabled={selected === "21 to 25"}>
+                                        <p>من 31 - 45 عام</p>
+                                        </AgeRadio>
+                                    </AgeSelectContainer>
+                                </AgeContainer>
+                                <AgeContainer>
+                                    <div className='subhead'>
+                                        <LoginSub><h3>هل أنت؟</h3></LoginSub>
+                                    </div>
+                                    <AgeSelectContainer>
+                                        <GenderRadio active={gender === "Male"} onClick={() => handleGenderSelect("Male")} disabled={gender === "Male"}>
+                                            {/* <div>Male</div> */}
+                                            <div><img className='boxicon' src={male} height={56} alt="Male" /></div>
+                                        </GenderRadio>
+                                        <GenderRadio active={gender === "Female"} onClick={() => handleGenderSelect("Female")} disabled={gender === "Female"}>
+                                            {/* <div>Female</div> */}
+                                            <div><img className='boxicon' src={Female} height={56} alt="Female" /></div>
+                                        </GenderRadio>
+                                    </AgeSelectContainer>
+                                </AgeContainer>
                             
-                            <div className='reg-button'>
+                                <div className='reg-button'>
                             
-                                <button className='register-button' >
-                                <a href='/physicalchar'>Next  </a>
-                                </button>
-                                
-                                
-                            </div>
+                                    <button className='register-button' >
+                                    <a href='/physicalchar'>حفظ التغييرات </a>
+                                    </button>
                             
-                        </FormContainer>
+                            
+                                </div>
+                            
+                            </FormContainer>
+                        </div>
                     </div>
 
                 </div>

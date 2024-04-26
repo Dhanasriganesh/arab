@@ -1,4 +1,5 @@
 import React from 'react'
+import Slider from 'react-slick';
 import Logo from '../../Assets/logo.jpg'
 import "./Homemainsty.css"
 import { FaShoppingCart } from "react-icons/fa";
@@ -24,9 +25,11 @@ const Homemain = () => {
           <FaShoppingCart />
 
         </div>
-        المتجر
-        الأكثر شيوعًا
-        مقترحات لك
+        <div className='middle-text'>
+          <p>المتجر</p>
+          <p> الأكثر شيوعًا</p>
+          <p> مقترحات لك</p>
+        </div>
         {/* <a href="/home" className='link'>
                     <>الرئيسية</>
                 </a> */}
@@ -43,12 +46,18 @@ const Homemain = () => {
 
         <div className='images'>
           <FaArrowLeft />
-          <img className="Yellow"
-            src={yellow} alt="yellow" />
-          <img className="Blue"
-            src={Blue} alt="blue" />
-          <img className="Bag"
-            src={Bag} alt="bag" />
+      
+          
+              <img className="Yellow"
+                src={yellow} alt="yellow" />
+          
+        
+              <img className="Blue"
+                src={Blue} alt="blue" />
+       
+              <img className="Bag"
+                src={Bag} alt="bag" />
+    
           <FaArrowRight />
         </div>
         <h1>...</h1>
@@ -59,6 +68,7 @@ const Homemain = () => {
         <p>مقترحات ملابس شائعة تتناسب مع أذواقك، لتجربة أسلوبك</p>
         <p>بكل أناقة وجمال!</p>
       </div>
+
       <div className='sub-footer'>
         
         <div className='img-text'>
@@ -97,7 +107,7 @@ const Homemain = () => {
            
             <div className='img-text'>
             <a href='/shirt'>
-              <img className="shirt"
+              <img className="wshirt"
               src={shirt} alt="shirt" />
               <p>هاينيس إسطنبول قميص أبيض</p>
               <p>trendyol من </p>
@@ -110,6 +120,7 @@ const Homemain = () => {
             
 
       </div>
+      
     </div>
   )
 }

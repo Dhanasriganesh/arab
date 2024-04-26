@@ -8,6 +8,7 @@ import PhysicalCharacteristics from "./components/authys/Physicalchar";
 import Preferences from "./components/authys/Preferences";
 import Homemain from "./components/authys/Homemain"
 import Shirt from "./components/authys/Shirt"
+import Size from "./components/authys/Size"
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route path="/preferences" element={<Preferences />}/>
       <Route path="/home" element={<Homemain/>}/>
       <Route path="/shirt" element={<Shirt/>}/>
+      <Route path="/size" element={<Size/>}/>
     </Routes>
     </Router>
   );

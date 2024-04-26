@@ -62,12 +62,12 @@ function PhysicalCharacteristics({ updateUserInfo, userInfo })
       </div>
       <div className='subnav'>
         <p>سمية الحربي</p>
-        <img className="imge"
+        <img className="iconimg"
             src={imge} alt="imge" />
       </div>
       <div className='subernav'>
       <a href="/preferences" className='link'>
-        <p>الخصائص     </p>
+      <p>التفضيلات</p>
         </a>
         <a href="/physicalchar" className='link'>
           <p> التفضيلات الجسدية</p>
@@ -86,18 +86,18 @@ function PhysicalCharacteristics({ updateUserInfo, userInfo })
             <FormContainer style={{ marginBottom: "2vh" }}>
               <HeightDropdown
                 type='number'
-                placeholder='Height in cm'
+                placeholder='طولك'
                 onChange={handleHeightSelect}
               />
               <HeightDropdown
                 type='number'
-                placeholder='Weight in Kgs'
+                placeholder='وزنك'
                 onChange={handleWeightSelect}
               />
             </FormContainer>
             <div className='characteristics-sty'>
               <AgeContainer style={{ padding: "10px", marginLeft: "-8vh" }}>
-                <LoginSub><b>Body Type</b></LoginSub>
+                <LoginSub><b>شكل جسمك</b></LoginSub>
                 <div className='body-type'>
                   <RadioContainer>
                     {bodyTypeOptions.map(option => (
@@ -111,7 +111,7 @@ function PhysicalCharacteristics({ updateUserInfo, userInfo })
                 </div>
               </AgeContainer>
               <AgeContainer style={{ padding: "10px", marginLeft: "-8vh" }}>
-                <LoginSub><b>Skin Color</b></LoginSub>
+                <LoginSub><b>لون بشرتك</b></LoginSub>
                 <div className='body-type'>
                   <RadioContainer>
                     {skinColorOptions.map(color => (
@@ -123,7 +123,8 @@ function PhysicalCharacteristics({ updateUserInfo, userInfo })
                 </div>
               </AgeContainer>
               <AgeContainer style={{ padding: "10px", marginLeft: "-8vh" }}>
-                <LoginSub><b>Hair Color</b></LoginSub>
+                <LoginSub><b>لون شعرك
+</b></LoginSub>
                 <div className='body-type'>
                   <RadioContainer>
                     {hairColorOptions.map(color => (
@@ -137,7 +138,7 @@ function PhysicalCharacteristics({ updateUserInfo, userInfo })
                  
                     <button className='register-button' name=''>
                     <a href='/preferences'>
-                      Next
+                    حفظ التغييرات
                       </a>
                     </button>
                   
