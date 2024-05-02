@@ -158,3 +158,10 @@
     scrollbar-width: none;
 
 }
+input::placeholder {
+    font-size: 20px; /* Replace with your preferred size */
+    /* Optional styles for better readability */
+    color: [color]; /* Adjust color for better contrast */
+    opacity: 1; /* Set a semi-transparent look */
+    
+  }

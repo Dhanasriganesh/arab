@@ -88,11 +88,13 @@ function PhysicalCharacteristics({ updateUserInfo, userInfo })
                 type='number'
                 placeholder='طولك'
                 onChange={handleHeightSelect}
+                required
               />
               <HeightDropdown
                 type='number'
                 placeholder='وزنك'
                 onChange={handleWeightSelect}
+                required
               />
             </FormContainer>
             <div className='characteristics-sty'>
@@ -135,13 +137,13 @@ function PhysicalCharacteristics({ updateUserInfo, userInfo })
                   </RadioContainer>
                 </div>
                 <div className='reg-button'>
-                 
+                <a href='/preferences'>
                     <button className='register-button' name=''>
-                    <a href='/preferences'>
+                   
                     حفظ التغييرات
-                      </a>
+                    
                     </button>
-                  
+                    </a>
                 </div>
               </AgeContainer>
             </div>

@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+@media screen and (max-width:740px) {
+  .shirt-content{
+      max-width: 90%;
+      margin: auto;
+      grid-template-columns: 1fr;
+  }
+  
+}

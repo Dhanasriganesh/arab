@@ -112,6 +112,7 @@ const Auth = () => {
                                         searchPlaceholder='Select Country'
                                         className='CountrySelect'
                                         fullWidth={true}
+                                        required
                                         // selectedSize={16}
                                     />
                                 </div>
@@ -120,7 +121,9 @@ const Auth = () => {
                                         country={country}
                                         countryValueType="short"
                                         placeholder='City'
+
                                         onChange={handleRegionSelect}
+                                        required
                                     />
                                 </div>
                                 <div className='phone'>
@@ -129,7 +132,9 @@ const Auth = () => {
                                         onChange={handlePhoneChange}
                                         enableSearch={true}
                                         placeholder="Enter Number with Country Code"
+                                        type='number'
                                         countryCodeEditable={true}
+                                        required
                                     />
                                 </div>
                                 <AgeContainer>
@@ -170,10 +175,11 @@ const Auth = () => {
                                 </AgeContainer>
                             
                                 <div className='reg-button'>
-                            
+                                <a href='/physicalchar'>
                                     <button className='register-button' >
-                                    <a href='/physicalchar'>حفظ التغييرات </a>
+                                   حفظ التغييرات 
                                     </button>
+                                    </a>
                             
                             
                                 </div>
