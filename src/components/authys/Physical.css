@@ -10,3 +10,9 @@
 .single{
     display: grid;
 }
+@media screen and (max-width: 768px) {
+    .body-type{
+        scroll-behavior: smooth;
+        scrollbar-color: black;
+    }
+}
