@@ -15,7 +15,7 @@ import frock from "../../Assets/5.jpg"
 import shirt from "../../Assets/7.jpg"
 const Homemain = () => {
   return (
-    <div className='auth-box'>
+    
       <div className='homepage'>
         <div className='nav'>
           <div className='icons'>
@@ -116,7 +116,7 @@ const Homemain = () => {
         </div>
       
       </div>
-    </div>
+    
   )
 }
 
