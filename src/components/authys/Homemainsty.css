@@ -37,6 +37,7 @@
 }
 .dress-content{
     background-color: rgb(15, 15, 100);
+    width: 850px;
     color: white;
     margin-top: 20px;
     justify-content: center;
@@ -140,7 +141,28 @@
     gap: 20px;
     text-align: end;
 }
-@media screen and (max-width:740px) {
+
+@media screen and (max-width: auto) {
+    .auth-box {
+      width: 100%;
+      padding-left: 10px;
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+    .homepage{
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .dress-content{
+      height: 100px;
+      width: max-content;
+    }
+    .nav{
+        max-width: fit-content;
+        display: flex;
+        justify-content: space-between;
+    }
     .img-text
     {
         max-width: 100%;
@@ -153,13 +175,6 @@
         margin: auto;
         grid-template-columns: 1fr;
     }  
-}
-@media screen and (max-width: 740px) {
-    .auth-box {
-      width: 90%;
-      margin-left: auto;
-      margin-right: auto;
-    }
   
  /* .nav {
       flex-direction: column;

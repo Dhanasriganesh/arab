@@ -30,15 +30,15 @@
     width: 141px;
 }
 .subernav{
-    color: rgb(90, 75, 252);
+    /* color: rgb(90, 75, 252); */
     display: flex;
     justify-content: center;
     margin-top: 40px;
     gap: 40px;
 }
 .tab-active{
-    color: rgb(90, 75, 252);
-    text-decoration: underline 2px;
+    /* color: rgb(90, 75, 252); */
+    /* text-decoration: underline 2px; */
 }
 
 .main-content{

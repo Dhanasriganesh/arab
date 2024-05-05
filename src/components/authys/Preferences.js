@@ -155,6 +155,12 @@ function Preferences({ updateUserInfo, userInfo }) {
             },
         ],
     };
+    const [activeTab, setActiveTab] = useState("preferences");
+
+    const handleTabClick = (tabName) => {
+        setActiveTab(tabName);
+    };
+
 
 
     return (
@@ -175,15 +181,15 @@ function Preferences({ updateUserInfo, userInfo }) {
                         src={imges} alt="imges" />
             </div>
             <div className='subernav'>
-                <a href="/preferences" className='link'>
-                <p>التفضيلات</p>
-                </a>
-                <a href="/physicalchar" className='link'>
-                    <p> التفضيلات الجسدية</p>
-                </a>
-                <a href="/" className='link'>
-                    <p className='tab-active'>معلوماتي الشخصية</p>
-                </a>
+               <a href='/preferences'>
+                    <p onClick={() => handleTabClick("preferences")} style={{ color: activeTab === "preferences" ? "blue" : "inherit" }}>التفضيلات</p>
+                    </a>
+                
+                    <p onClick={() => handleTabClick("physicalCharacteristics")} style={{ color: activeTab === "physicalCharacteristics" ? "blue" : "inherit" }}>التفضيلات الجسدية</p>
+                
+                
+                    <p onClick={() => handleTabClick("personalInfo")} style={{ color: activeTab === "personalInfo" ? "blue" : "inherit" }}>معلوماتي الشخصية</p>
+                    
             </div>
             <div className='main-content'>
                 <div className='auth-box'>

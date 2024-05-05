@@ -8,6 +8,8 @@ import Female from "../../Assets/Group 35.jpg";
 import img from "../../Assets/img.jpg";
 import { Link } from 'react-router-dom';
 import './Physicalchar'
+// import { useHistory } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 const Auth = () => {
     const [name, setName] = useState("");
@@ -58,6 +60,18 @@ const Auth = () => {
         // update({ gender: value });
     };
 
+    const [activeTab, setActiveTab] = useState("personalInfo");
+
+    const handleTabClick = (tabName) => {
+        setActiveTab(tabName);
+    };
+    // const history = useHistory();
+    const handleButtonClick = () => 
+    {
+    //   history.push('/physicalchar');
+    };
+
+
     return (
         <div className='auth'>
             <div className='nav'>
@@ -73,18 +87,18 @@ const Auth = () => {
             <div className='subnav'>
                 <p>سمية الحربي</p>
                 <img className="iconimg"
-                        src={img} alt="img" />
+                    src={img} alt="img" />
             </div>
             <div className='subernav'>
-            <a href="/preferences" className='link'>
-                <p>التفضيلات</p>
-                </a>
-                <a href="/Physicalchar" className='link'>
-                <p> التفضيلات الجسدية</p>
-                </a>
-                <a href="/" className='link'>
-                    <p className='tab-active'>معلوماتي الشخصية</p>
-                </a>
+               
+                    <p onClick={() => handleTabClick("preferences")} style={{ color: activeTab === "preferences" ? "blue" : "inherit" }}>التفضيلات</p>
+                    
+                
+                    <p onClick={() => handleTabClick("physicalCharacteristics")} style={{ color: activeTab === "physicalCharacteristics" ? "blue" : "inherit" }}>التفضيلات الجسدية</p>
+                
+                    <a href='/'>
+                    <p onClick={() => handleTabClick("personalInfo")} style={{ color: activeTab === "personalInfo" ? "blue" : "inherit" }}>معلوماتي الشخصية</p>
+                    </a>
             </div>
             <div className='main-content'>
                 <div className='auth-box'>
@@ -113,7 +127,7 @@ const Auth = () => {
                                         className='CountrySelect'
                                         fullWidth={true}
                                         required
-                                        // selectedSize={16}
+                                    // selectedSize={16}
                                     />
                                 </div>
                                 <div className='city'>
@@ -139,25 +153,27 @@ const Auth = () => {
                                 </div>
                                 <AgeContainer>
                                     <div className='headd'>
-                                       <LoginSub><h3>حدد فئتك العمرية</h3> </LoginSub>
+                                        <LoginSub><h3>حدد فئتك العمرية</h3> </LoginSub>
                                     </div>
                                     <AgeSelectContainer>
                                         <AgeRadio active={selected === "12 to 14"} onClick={() => handleAgeSelect("12 to 14")} disabled={selected === "12 to 14"}>
-                                        من 17 - 30 عام
+                                            من 17 - 30 عام
                                         </AgeRadio>
                                         <AgeRadio active={selected === "15 to 17"} onClick={() => handleAgeSelect("15 to 17")} disabled={selected === "15 to 17"}>
-                                        من 12 - 16 عام
+                                            من 12 - 16 عام
                                         </AgeRadio>
                                     </AgeSelectContainer>
                                     <AgeSelectContainer>
                                         <AgeRadio active={selected === "18 to 20"} onClick={() => handleAgeSelect("18 to 20")} disabled={selected === "18 to 20"}>
-                                        فوق 45 عام
+                                            فوق 45 عام
                                         </AgeRadio>
                                         <AgeRadio active={selected === "21 to 25"} onClick={() => handleAgeSelect("21 to 25")} disabled={selected === "21 to 25"}>
-                                        <p>من 31 - 45 عام</p>
+                                            <p>من 31 - 45 عام</p>
                                         </AgeRadio>
+                                       
                                     </AgeSelectContainer>
                                 </AgeContainer>
+                                
                                 <AgeContainer>
                                     <div className='subhead'>
                                         <LoginSub><h3>هل أنت؟</h3></LoginSub>
@@ -173,17 +189,19 @@ const Auth = () => {
                                         </GenderRadio>
                                     </AgeSelectContainer>
                                 </AgeContainer>
-                            
+
                                 <div className='reg-button'>
-                                <a href='/physicalchar'>
-                                    <button className='register-button' >
-                                   حفظ التغييرات 
-                                    </button>
-                                    </a>
-                            
-                            
+                                <Link to="/physicalchar">
+                                        <button className='register-button' >
+                                       
+                                            حفظ التغييرات
+                                           
+                                        </button>
+                                        </Link>
+
+
                                 </div>
-                            
+
                             </FormContainer>
                         </div>
                     </div>

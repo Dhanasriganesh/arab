@@ -48,6 +48,12 @@ function PhysicalCharacteristics({ updateUserInfo, userInfo })
     // updateUserInfo({ weight: e.target.value });
   };
 
+  const [activeTab, setActiveTab] = useState("physicalCharacteristics");
+
+  const handleTabClick = (tabName) => {
+      setActiveTab(tabName);
+  };
+
   return (
     <div>
       <div className='nav'>
@@ -66,15 +72,14 @@ function PhysicalCharacteristics({ updateUserInfo, userInfo })
             src={imge} alt="imge" />
       </div>
       <div className='subernav'>
-      <a href="/preferences" className='link'>
-      <p>التفضيلات</p>
-        </a>
-        <a href="/physicalchar" className='link'>
-          <p> التفضيلات الجسدية</p>
-        </a>
-        <a href="/" className='link'>
-          <p className='tab-active'>معلوماتي الشخصية</p>
-        </a>
+      <p onClick={() => handleTabClick("preferences")} style={{ color: activeTab === "preferences" ? "blue" : "inherit" }}>التفضيلات</p>
+                
+                <a href='/physicalchar'>
+                <p onClick={() => handleTabClick("physicalCharacteristics")} style={{ color: activeTab === "physicalCharacteristics" ? "blue" : "inherit" }}>التفضيلات الجسدية</p>
+                </a>
+            
+                <p onClick={() => handleTabClick("personalInfo")} style={{ color: activeTab === "personalInfo" ? "blue" : "inherit" }}>معلوماتي الشخصية</p>
+
       </div>
 
       <div className='main-content'>
