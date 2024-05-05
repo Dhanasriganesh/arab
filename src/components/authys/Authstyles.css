@@ -158,7 +158,7 @@
     /* scrollbar-width: ; */
     /* overflow-x: hidden;
     overflow-y: hidden; */
-    /* scrollbar-width: none; */
+    scrollbar-width: none;
 
 }
 input::placeholder {
