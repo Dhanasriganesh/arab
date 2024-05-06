@@ -87,8 +87,8 @@
     color: rgb(138, 22, 221);
 }
 .auth-content{
-    margin-left: 20px;
-    margin-right: 20px;
+    /* margin-left: 20px; */
+    /* margin-right: 20px; */
     /* display: flex; */
     justify-content:center;
     margin-bottom: 30px;
@@ -158,6 +158,8 @@
     /* scrollbar-width: ; */
     /* overflow-x: hidden;
     overflow-y: hidden; */
+    scroll-behavior: smooth;
+    overflow: visible;
     scrollbar-width: none;
 
 }
